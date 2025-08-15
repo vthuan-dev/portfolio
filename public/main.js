@@ -501,15 +501,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Parallax Effect on Scroll
+    // Hero Fade Effect on Scroll
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
-        const parallaxElements = document.querySelectorAll('.hero-content');
+        const heroContent = document.querySelector('.hero-content');
         
-        parallaxElements.forEach(element => {
-            const speed = 0.5;
-            element.style.transform = `translateY(${scrolled * speed}px)`;
-        });
+        if (heroContent) {
+            // Bắt đầu làm mờ khi scroll xuống 100px
+            const fadeStart = 100;
+            // Hoàn thành làm mờ khi scroll xuống 300px
+            const fadeEnd = 300;
+            
+            if (scrolled > fadeStart) {
+                const opacity = Math.max(0, 1 - (scrolled - fadeStart) / (fadeEnd - fadeStart));
+                const translateY = Math.min(30, (scrolled - fadeStart) / 10);
+                const scale = Math.max(0.95, 1 - (scrolled - fadeStart) / 2000);
+                const blur = Math.min(5, (scrolled - fadeStart) / 40);
+                
+                heroContent.style.opacity = opacity;
+                heroContent.style.transform = `translateY(-${translateY}px) scale(${scale})`;
+                heroContent.style.filter = `blur(${blur}px)`;
+                
+                if (opacity <= 0.1) {
+                    heroContent.classList.add('fade-out');
+                }
+            } else {
+                heroContent.style.opacity = 1;
+                heroContent.style.transform = 'translateY(0) scale(1)';
+                heroContent.style.filter = 'blur(0)';
+                heroContent.classList.remove('fade-out');
+            }
+        }
     });
 
     // Magnetic Buttons Effect
