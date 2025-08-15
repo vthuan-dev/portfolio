@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Thuần - Backend Developer Portfolio</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        <div class="loader-logo">&lt;VT/&gt;</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">&lt;VT/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-lang-key="nav.home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-lang-key="nav.about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-lang-key="nav.skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-lang-key="nav.experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-lang-key="nav.projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-lang-key="nav.contact">Contact</a></li>
+                <li class="language-switch">
+                    <button id="lang-en" class="lang-btn active">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button id="lang-vi" class="lang-btn">VI</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3D Canvas Background -->
+    <canvas id="three-canvas"></canvas>
+    
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-up">
+                    <h3 class="hero-subtitle" data-lang-key="hero.hello">Hello, I'm</h3>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Nguyễn Văn Thuần</span>
+                    </h1>
+                    <h2 class="hero-role">
+                        <span class="typing-text" data-lang-key="hero.role">Backend Developer</span>
+                        <span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description" data-lang-key="hero.description">
+                        Passionate about software development and artificial intelligence.
+                        Specializing in Blockchain, Microservices and Cloud Computing.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i> <span data-lang-key="hero.buttons.projects">View Projects</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> <span data-lang-key="hero.buttons.contact">Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-3d-model" id="hero-3d-container">
+                    <!-- 3D Model will be rendered here -->
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="gradient-text" data-lang-key="about.title">About Me</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="about-description" data-lang-key="about.description1">
+                        With a strong programming foundation and the ability to quickly complete projects, 
+                        I aspire to develop my career in information technology, especially software 
+                        development and artificial intelligence.
+                    </p>
+                    <p class="about-description" data-lang-key="about.description2">
+                        I want to become a technical expert, contributing to innovative projects 
+                        and bringing practical value to businesses and the community.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4 data-lang-key="about.education">Education</h4>
+                                <p data-lang-key="about.educationValue">Can Tho University - IT (2021-2025)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4 data-lang-key="about.location">Location</h4>
+                                <p data-lang-key="about.locationValue">Can Tho, Vietnam</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <h4 data-lang-key="about.language">Language</h4>
+                                <p data-lang-key="about.languageValue">TOEIC 470</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Programming Languages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="stat-number" data-count="2">0</div>
+                        <div class="stat-label">Major Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-database"></i></div>
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-label">Database Systems</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-cloud"></i></div>
+                        <div class="stat-number" data-count="1">0</div>
+                        <div class="stat-label">Cloud Platform</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="gradient-text" data-lang-key="skills.title">Technical Skills</span>
+            </h2>
+            
+            <div class="skills-container">
+                <!-- Programming Languages -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i> Programming Languages
+                    </h3>
+                    <div class="skill-cards">
+                        <div class="skill-card" data-skill="nodejs">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <h4>Node.js</h4>
+                            <p>Express.js, Nest.js</p>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="go">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go">
+                            </div>
+                            <h4>Go</h4>
+                            <p>Blockchain Integration</p>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="csharp">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
+                            </div>
+                            <h4>C#</h4>
+                            <p>.NET Framework</p>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="python">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h4>Python</h4>
+                            <p>Flask, AI/ML</p>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="javascript">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4>JavaScript</h4>
+                            <p>ES6+, Vue.js</p>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title">
+                        <i class="fas fa-database"></i> Databases
+                    </h3>
+                    <div class="skill-cards">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                            </div>
+                            <h4>MySQL</h4>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server">
+                            </div>
+                            <h4>SQL Server</h4>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                            </div>
+                            <h4>PostgreSQL</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies & Tools -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i> Technologies & Tools
+                    </h3>
+                    <div class="skill-cards">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <h4>Docker</h4>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <h4>Git & GitHub</h4>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <h4>AWS</h4>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <h4>Blockchain</h4>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h4>Microservices</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="gradient-text" data-lang-key="experience.title">Experience</span>
+            </h2>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jun 2025 - Aug 2025</div>
+                        <h3 class="timeline-title" data-lang-key="experience.position">Backend Developer Intern</h3>
+                        <h4 class="timeline-company" data-lang-key="experience.company">Teknix Corporation</h4>
+                        <ul class="timeline-description">
+                            <li data-lang-key="experience.description.0">Developed and deployed backend services interacting with blockchain for fintech projects using Go</li>
+                            <li data-lang-key="experience.description.1">Built APIs for data crawling and wallet management on blockchain networks such as Tron Network, Binance Smart Chain (BSC)</li>
+                            <li data-lang-key="experience.description.2">Optimized performance and ensured security in blockchain system integrations</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Go</span>
+                            <span class="tag">Blockchain</span>
+                            <span class="tag">Fintech</span>
+                            <span class="tag">API Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="gradient-text" data-lang-key="projects.title">Featured Projects</span>
+            </h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <h3 data-lang-key="projects.project1.title">Blockchain Traceability System</h3>
+                            <p data-lang-key="projects.project1.description">Pomelo origin tracing using Blockchain technology</p>
+                            <div class="project-tech">
+                                <span>Node.js</span>
+                                <span>Solidity</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-back">
+                            <h4 data-lang-key="projects.keyFeatures">Key Features</h4>
+                            <ul>
+                                <li data-lang-key="projects.project1.features.0">Backend for origin tracing with Node.js & Blockchain</li>
+                                <li data-lang-key="projects.project1.features.1">User and logistics management</li>
+                                <li data-lang-key="projects.project1.features.2">Account and inventory management integration</li>
+                                <li data-lang-key="projects.project1.features.3">QR code scanning support</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/vthuan-dev/Blockchain-Traceability.git" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> <span data-lang-key="projects.viewProject">GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h3 data-lang-key="projects.project2.title">E-Commerce Platform</h3>
+                            <p data-lang-key="projects.project2.description">E-commerce website with intelligent recommendation system</p>
+                            <div class="project-tech">
+                                <span>Express.js</span>
+                                <span>Flask</span>
+                                <span>Vue.js</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-back">
+                            <h4 data-lang-key="projects.keyFeatures">Key Features</h4>
+                            <ul>
+                                <li data-lang-key="projects.project2.features.0">Full-stack development from frontend to backend</li>
+                                <li data-lang-key="projects.project2.features.1">Personalized recommendation system</li>
+                                <li data-lang-key="projects.project2.features.2">Content-based & Collaborative filtering</li>
+                                <li data-lang-key="projects.project2.features.3">Real-time with WebSocket</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/vthuan-dev/Recommender-System" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> <span data-lang-key="projects.viewProject">GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="gradient-text" data-lang-key="contact.title">Get In Touch</span>
+            </h2>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3 data-lang-key="contact.subtitle">Let's Connect</h3>
+                    <p data-lang-key="contact.description">I'm always interested in hearing about new opportunities and exciting projects.</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:vthuan.dev@gmail.com">vthuan.dev@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cần Thơ, Việt Nam</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/vthuan-dev" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/thuan-nguyen-van-297534323" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/vthuannnn1" target="_blank" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <i class="fas fa-paper-plane"></i> <span data-lang-key="contact.form.send">Send Message</span>
+                        </button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Nguyễn Văn Thuần. <span data-lang-key="footer.copyright">All rights reserved.</span></p>
+            <p><span data-lang-key="footer.builtWith">Built with</span> <i class="fas fa-heart"></i> and Three.js</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script src="main.js"></script>
+    <script src="language-switcher.js"></script>
+</body>
+</html>
+

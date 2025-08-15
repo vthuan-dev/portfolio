@@ -1,0 +1,188 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "hello": "Hello, I'm",
+      "role": "Backend Developer",
+      "roles": ["Backend Developer", "Blockchain Enthusiast", "Problem Solver", "Tech Innovator"],
+      "description": "Passionate about software development and artificial intelligence. Specializing in Blockchain, Microservices and Cloud Computing.",
+      "buttons": {
+        "projects": "View Projects",
+        "contact": "Contact Me"
+      }
+    },
+    "about": {
+      "title": "About Me",
+      "description1": "With a strong programming foundation and the ability to quickly complete projects, I aspire to develop my career in information technology, especially software development and artificial intelligence.",
+      "description2": "I want to become a technical expert, contributing to innovative projects and bringing practical value to businesses and the community.",
+      "education": "Education",
+      "educationValue": "Can Tho University - IT (2021-2025)",
+      "location": "Location",
+      "locationValue": "Can Tho, Vietnam",
+      "language": "Language",
+      "languageValue": "TOEIC 470"
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "categories": {
+        "languages": "Programming Languages",
+        "databases": "Databases",
+        "tools": "Technologies & Tools"
+      }
+    },
+    "experience": {
+      "title": "Experience",
+      "position": "Backend Developer Intern",
+      "company": "Teknix Corporation",
+      "description": [
+        "Developed and deployed backend services interacting with blockchain for fintech projects using Go",
+        "Built APIs for data crawling and wallet management on blockchain networks such as Tron Network, Binance Smart Chain (BSC)",
+        "Optimized performance and ensured security in blockchain system integrations"
+      ]
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "keyFeatures": "Key Features",
+      "project1": {
+        "title": "Blockchain Traceability System",
+        "description": "Pomelo origin tracing using Blockchain technology",
+        "features": [
+          "Backend for origin tracing with Node.js & Blockchain",
+          "User and logistics management",
+          "Account and inventory management integration",
+          "QR code scanning support"
+        ]
+      },
+      "project2": {
+        "title": "E-Commerce Platform",
+        "description": "E-commerce website with intelligent recommendation system",
+        "features": [
+          "Full-stack development from frontend to backend",
+          "Personalized recommendation system",
+          "Content-based & Collaborative filtering",
+          "Real-time with WebSocket"
+        ]
+      },
+      "viewProject": "GitHub"
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "subtitle": "Let's Connect",
+      "description": "I'm always interested in hearing about new opportunities and exciting projects.",
+      "form": {
+        "name": "Your Name",
+        "email": "Your Email",
+        "subject": "Subject",
+        "message": "Your Message",
+        "send": "Send Message",
+        "sending": "Sending...",
+        "success": "Thank you for your message! I will get back to you soon.",
+        "error": "Oops! There was a problem sending your message. Please try again later."
+      }
+    },
+    "footer": {
+      "copyright": "All rights reserved.",
+      "builtWith": "Built with"
+    }
+  },
+  "vi": {
+    "nav": {
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "skills": "Kỹ năng",
+      "experience": "Kinh nghiệm",
+      "projects": "Dự án",
+      "contact": "Liên hệ"
+    },
+    "hero": {
+      "hello": "Xin chào, tôi là",
+      "role": "Backend Developer",
+      "roles": ["Backend Developer", "Blockchain Enthusiast", "Problem Solver", "Tech Innovator"],
+      "description": "Đam mê về phát triển phần mềm và trí tuệ nhân tạo. Chuyên môn về Blockchain, Microservices và Điện toán đám mây.",
+      "buttons": {
+        "projects": "Xem dự án",
+        "contact": "Liên hệ"
+      }
+    },
+    "about": {
+      "title": "Giới thiệu",
+      "description1": "Với nền tảng lập trình vững chắc và khả năng hoàn thành nhanh các dự án, tôi mong muốn phát triển sự nghiệp trong lĩnh vực công nghệ thông tin, đặc biệt là phát triển phần mềm và trí tuệ nhân tạo.",
+      "description2": "Tôi mong muốn trở thành một chuyên gia kỹ thuật, đóng góp vào các dự án đổi mới và mang lại giá trị thiết thực cho doanh nghiệp và cộng đồng.",
+      "education": "Học vấn",
+      "educationValue": "Đại học Cần Thơ - CNTT (2021-2025)",
+      "location": "Địa điểm",
+      "locationValue": "Cần Thơ, Việt Nam",
+      "language": "Ngôn ngữ",
+      "languageValue": "TOEIC 470"
+    },
+    "skills": {
+      "title": "Kỹ năng chuyên môn",
+      "categories": {
+        "languages": "Ngôn ngữ lập trình",
+        "databases": "Cơ sở dữ liệu",
+        "tools": "Công nghệ & Công cụ"
+      }
+    },
+    "experience": {
+      "title": "Kinh nghiệm",
+      "position": "Backend Developer Intern",
+      "company": "Teknix Corporation",
+      "description": [
+        "Phát triển và triển khai các dịch vụ backend tương tác với blockchain cho các dự án fintech bằng ngôn ngữ Go",
+        "Xây dựng API để crawling dữ liệu và quản lý ví trên các mạng blockchain như Tron Network, Binance Smart Chain (BSC)",
+        "Tối ưu hóa hiệu năng và đảm bảo bảo mật trong tích hợp hệ thống blockchain"
+      ]
+    },
+    "projects": {
+      "title": "Dự án nổi bật",
+      "keyFeatures": "Tính năng chính",
+      "project1": {
+        "title": "Hệ thống truy xuất nguồn gốc Blockchain",
+        "description": "Truy xuất nguồn gốc bưởi sử dụng công nghệ Blockchain",
+        "features": [
+          "Backend truy xuất nguồn gốc với Node.js & Blockchain",
+          "Quản lý người dùng và logistics",
+          "Tích hợp quản lý tài khoản và kho hàng",
+          "Hỗ trợ quét mã QR"
+        ]
+      },
+      "project2": {
+        "title": "Nền tảng thương mại điện tử",
+        "description": "Website thương mại điện tử với hệ thống gợi ý thông minh",
+        "features": [
+          "Fullstack development từ frontend đến backend",
+          "Hệ thống gợi ý cá nhân hóa",
+          "Content-based & Collaborative filtering",
+          "Real-time với WebSocket"
+        ]
+      },
+      "viewProject": "GitHub"
+    },
+    "contact": {
+      "title": "Liên hệ",
+      "subtitle": "Kết nối ngay",
+      "description": "Tôi luôn quan tâm đến các cơ hội mới và các dự án thú vị.",
+      "form": {
+        "name": "Họ tên của bạn",
+        "email": "Email của bạn",
+        "subject": "Chủ đề",
+        "message": "Tin nhắn của bạn",
+        "send": "Gửi tin nhắn",
+        "sending": "Đang gửi...",
+        "success": "Cảm ơn bạn đã gửi tin nhắn! Tôi sẽ phản hồi sớm nhất có thể.",
+        "error": "Rất tiếc! Đã xảy ra lỗi khi gửi tin nhắn. Vui lòng thử lại sau."
+      }
+    },
+    "footer": {
+      "copyright": "Đã đăng ký bản quyền.",
+      "builtWith": "Được xây dựng với"
+    }
+  }
+}

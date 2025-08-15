@@ -1,0 +1,35 @@
+{
+  "name": "portfolio-nguyen-van-thuan",
+  "version": "1.0.1",
+  "description": "3D Portfolio Website for Nguyen Van Thuan - Backend Developer with multilingual support",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000",
+    "dev": "npx live-server --port=3000 --watch",
+    "build": "echo 'No build process required for static site'"
+  },
+  "keywords": [
+    "portfolio",
+    "threejs",
+    "3d",
+    "backend-developer",
+    "blockchain",
+    "web-development",
+    "multilingual",
+    "particles-js"
+  ],
+  "author": "Nguyen Van Thuan",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.158.0",
+    "particles.js": "^2.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vthuan-dev"
+  }
+}
+
