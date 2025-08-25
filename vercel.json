@@ -1,9 +1,0 @@
-{
-    "version": 2,
-    "buildCommand": false,
-    "outputDirectory": "public",
-    "public": true,
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
-    ]
-}
